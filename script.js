@@ -10,7 +10,8 @@ function callAFunc() {
         let location = prompt('input is for the region/location of the monster.');
         let nameOfMonster = prompt('input the name of the monster.');
 
-        document.getElementById('result').innerhtml = " After " + timeInHours + " hours, " + " the population of " + nameOfMonster.toUpperCase() + " has risen to " + exponentialPopulationGrowth;
-        
+        let infoMonster = (location +" "+ nameMonster).toUpperCase();
+        let output = "After " + timeInHours + " hours, " + " the population of " + infoMonster + " has risen to " + exponentialPopulationGrowth;
+        document.getElementById('result').innerhtml = output;
     }
 
