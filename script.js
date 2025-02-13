@@ -1,17 +1,18 @@
-function callAFunc() {
+function Functions() {
 
-        let intialPopulation = parseFloat(prompt('input the Initial Population'));
-        let rateOfGrowth = parseFloat(prompt('input the Rate of growth'));
-        let timeInHours = parseFloat(prompt('input the time in hours'));
+        let intialPop = prompt('Initial Population');
+        let rate = prompt('rate of growth');
+        let time = prompt('time in hours');
 
-        let exponentialPopulationGrowth = Math.round(intialPopulation * Math.pow(Math.E,rateOfGrowth*timeInHours));
+        let finalPop = Math.round(parseFloat(intialPop)*(Math.pow(Math.E,parseFloat(rate)*parseFloat(time))));
+        let monstername = prompt('Monster Name');
+        let monsterregion = prompt ('Monster Region');
 
+        let temp = ''
+        let MONESTER = temp.concat(monsterregion,' ',monstername).toUpperCase();
+        let output = "After " + time + " hours, the population of " + MONESTER + " has risen to " + finalPop;
 
-        let location = prompt('input is for the region/location of the monster.');
-        let nameOfMonster = prompt('input the name of the monster.');
+        document.getElementById('result').innerHTML = output;
 
-        let infoMonster = (location +" "+ nameMonster).toUpperCase();
-        let output = "After " + timeInHours + " hours, " + " the population of " + infoMonster + " has risen to " + exponentialPopulationGrowth;
-        document.getElementById('result').innerhtml = output;
+        
     }
-
